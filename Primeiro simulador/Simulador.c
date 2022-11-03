@@ -46,7 +46,7 @@ int main(){
         if(tempo_decorrido == chegada){
             printf("Chegada em %lF.\n", tempo_decorrido);
             if(!fila){
-                servico = tempo_decorrido + (-1.0 / (1.0/intervalo_medio_chegada)) * log(aleatorio());
+                servico = tempo_decorrido + (-1.0 / (1.0/tempo_medio_servico)) * log(aleatorio());
                 
             }
             fila++;
@@ -57,7 +57,7 @@ int main(){
             fila--;
 
             if(fila){
-                servico = tempo_decorrido + (-1.0 / (1.0/intervalo_medio_chegada)) * log(aleatorio());
+                servico = tempo_decorrido + (-1.0 / (1.0/tempo_medio_servico)) * log(aleatorio());
             }
         }
     }
